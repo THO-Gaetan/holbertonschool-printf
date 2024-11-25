@@ -3,7 +3,7 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int i = 0;
+	int i = 0, count = 0;
 	char c;
 	char *str;
 
@@ -18,14 +18,14 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == c)
 			{
 				c = va_arg(args, int);
-				write(1, &c, 1);
+				count += write(1, &c, 1);
 				i++;
 				break;
 			}
 			else if (format[i + 1] == 's')
 			{
 				str = va_arg(args, char*);
-				write(1, &str, char*);
+				count += write(1, str++, 1);
 				i++;
 				break;
 			}
