@@ -3,7 +3,7 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int i = 0, count = 0;
+	int i = 0;
 	char c;
 	char *str;
 
@@ -12,27 +12,31 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	while (format[i])
 	{
-		_putchar(format[i]);
 		if (format[i] == '%')
 		{
-			if (format[i + 1] == c)
+			i++;
+			if (format[i] == c)
 			{
 				c = va_arg(args, int);
-				count += write(1, &c, 1);
+				write(1, &c, 1);
 				i++;
-				break;
 			}
-			else if (format[i + 1] == 's')
+			else if (format[i] == 's')
 			{
 				str = va_arg(args, char*);
-				count += write(1, str++, 1);
+				write(1, str++, 1);
 				i++;
-				break;
 			}
 			else
-				return (0);
+			{
+				_putchar('%');
+				_putchar(format[i]);
+			}
 		}
+		else
+			_putchar(format[i]);
 	i++;
 	}
+	va_end(args);
 	return (i);
 }
