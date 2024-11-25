@@ -3,7 +3,7 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int i = 0;
+	int i = 0, n = 0;
 	char *str;
 
 	if (format == 0)
@@ -14,6 +14,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
+			n--;
 			if (format[i] == 'c')
 			{
 				_putchar(va_arg(args, int));
@@ -27,6 +28,7 @@ int _printf(const char *format, ...)
 				{
 					_putchar(*str);
 					str++;
+					n++;
 				}
 			}
 			else if (format[i] == '%')
@@ -44,5 +46,8 @@ int _printf(const char *format, ...)
 	i++;
 	}
 	va_end(args);
+	if (n > 0)
+		n = n - 1;
+	i += n;
 	return (i - 1);
 }
