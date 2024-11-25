@@ -3,7 +3,6 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int n = 0;
 	int i = 0;
 	char *str;
 
@@ -28,7 +27,6 @@ int _printf(const char *format, ...)
 				{
 					_putchar(*str);
 					str++;
-					n++;
 				}
 			}
 			else if (format[i] == '%')
@@ -46,6 +44,5 @@ int _printf(const char *format, ...)
 	i++;
 	}
 	va_end(args);
-	i += n - 1;
 	return (i - 1);
 }
