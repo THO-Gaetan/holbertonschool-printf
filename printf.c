@@ -46,6 +46,6 @@ int _printf(const char *format, ...)
 	i++;
 	}
 	va_end(args);
-	i + (n - 1);
+	i += n - 1;
 	return (i - 1);
 }
