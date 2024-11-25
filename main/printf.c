@@ -4,7 +4,6 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	int i = 0;
-	char c;
 	char *str;
 
 	if (format == 0)
@@ -15,17 +14,20 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == c)
+			if (format[i] == 'c')
 			{
-				c = va_arg(args, int);
-				write(1, &c, 1);
-				i++;
+				_putchar(va_arg(args, int));
 			}
 			else if (format[i] == 's')
 			{
 				str = va_arg(args, char*);
-				write(1, str++, 1);
-				i++;
+				if (!str)
+					str = "(nil)";
+				while (*str)
+				{
+					_putchar(*str);
+					str++;
+				}
 			}
 			else
 			{
