@@ -6,6 +6,8 @@ int _printf(const char *format, ...)
 	int i = 0;
 	char *str;
 
+	if (format == 0)
+		return (0);
 	va_start(args, format);
 	while (format[i])
 	{
@@ -26,6 +28,10 @@ int _printf(const char *format, ...)
 					_putchar(*str);
 					str++;
 				}
+			}
+			else if (format[i] == '%')
+			{
+				_putchar('%');
 			}
 			else
 			{
