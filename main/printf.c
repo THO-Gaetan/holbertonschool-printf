@@ -15,26 +15,24 @@ int _printf(const char *format, ...)
 		_putchar(format[i]);
 		if (format[i] == '%')
 		{
-			switch (format[i + 1])
+			if (format[i + 1] == c)
 			{
-				case 'c':
-				{
-					c = va_arg(args, int);
-					write(1, &c, 1);
-					i++;
-					break;
-				}
-				case 's':
-				{
-					str = va_arg(args, char*);
-					write(1, &str, char*);
-					i++;
-					break;
-				}
-				default:
-				return (0);
+				c = va_arg(args, int);
+				write(1, &c, 1);
+				i++;
+				break;
 			}
+			else if (format[i + 1] == 's')
+			{
+				str = va_arg(args, char*);
+				write(1, &str, char*);
+				i++;
+				break;
+			}
+			else
+				return (0);
 		}
 	i++;
 	}
+	return (i);
 }
