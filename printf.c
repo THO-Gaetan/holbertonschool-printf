@@ -14,10 +14,9 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			n--;
 			if (format[i] == 'c')
 			{
-				_putchar(va_arg(args, int));
+				n += _putchar(va_arg(args, int));
 			}
 			else if (format[i] == 's')
 			{
@@ -26,28 +25,24 @@ int _printf(const char *format, ...)
 					str = "(nil)";
 				while (*str)
 				{
-					_putchar(*str);
+					n += _putchar(*str);
 					str++;
-					n++;
 				}
 			}
 			else if (format[i] == '%')
 			{
-				_putchar('%');
+				n += _putchar('%');
 			}
 			else
 			{
-				_putchar('%');
-				_putchar(format[i]);
+				n += _putchar('%');
+				n += _putchar(format[i]);
 			}
 		}
 		else
-			_putchar(format[i]);
+			n += _putchar(format[i]);
 	i++;
 	}
 	va_end(args);
-	if (n > 0)
-		n = n - 1;
-	i += n;
-	return (i - 1);
+	return (n - 1);
 }
