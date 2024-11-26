@@ -31,10 +31,23 @@ int printf_str(char format, va_list args)
 int printf_int(char format, va_list args)
 {
 	int n = 0;
-	int i;
 
-	i = va_arg(args, int);
 	if (format == 'd' || format == 'i')
-		n += write(1, &i, 4);
+		n += printf_int_helper(va_arg(args, int));
+	return (n);
+}
+
+int printf_int_helper(int i)
+{
+	int n = 0;
+
+	if (i < 0)
+	{
+		i = -i;
+		_putchar('-');
+	}
+	if (i >= 10)
+		n += printf_int_helper(i / 10);
+	n += _putchar((i % 10) + '0');
 	return (n);
 }
