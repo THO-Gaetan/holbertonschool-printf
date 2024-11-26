@@ -3,11 +3,15 @@
 
 #include <stdarg.h>
 #include <unistd.h>
-
+/**
+ * struct format_managers - Struct to map format specifiers to functions
+ * @specifier: The format specifier character (e.g., 'c', 's', 'd', 'i', '%')
+ * @manager: Pointer to the function that handles the specifier
+ */
 typedef struct format_managers
 {
-    char specifier;
-    int (*manager)(va_list);
+	char specifier;
+	int (*manager)(va_list);
 } format_manager_t;
 
 int printf_char(va_list args);

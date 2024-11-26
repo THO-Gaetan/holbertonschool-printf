@@ -1,5 +1,11 @@
 #include "main.h"
-
+/**
+ * _printf - Produces output according to a format
+ * @format: A character string containing zero or more directives
+ *
+ * Return: The number of characters printed (excluding the null byte
+ * used to end output to strings)
+ */
 int _printf(const char *format, ...)
 {
 	va_list args;
