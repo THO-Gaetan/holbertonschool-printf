@@ -21,6 +21,11 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
+			if (format[i] == NULL)
+			{
+				n += _putchar("%");
+				return (n);
+			}
 			n += printf_write(i, format, args);
 		}
 		else
