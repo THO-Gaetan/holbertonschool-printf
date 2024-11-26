@@ -12,7 +12,10 @@ int _printf(const char *format, ...)
 	int i = 0, n = 0;
 
 	if (format == 0)
+	{
+		_putchar("\n");
 		return (-1);
+	}
 	va_start(args, format);
 	while (format[i])
 	{
