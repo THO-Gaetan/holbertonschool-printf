@@ -64,7 +64,7 @@ int printf_int_helper(int i)
 	if (i < 0)
 	{
 		i = -i;
-		n +=_putchar('-');
+		n += _putchar('-');
 	}
 	if (i / 10)
 		n += printf_int_helper(i / 10);
