@@ -1,21 +1,30 @@
 #include "main.h"
 
-int printf_write(char format, va_list args)
-{
-	int n = 0;
 
-	if (format == 'c')
-		n += printf_char(format, args);
-	else if (format == 's')
-		n += printf_str(format, args);
-	else if (format == 'd' || format == 'i')
-		n += printf_int(format, args);
-	else if (format == '%')
-		n += _putchar('%');
-	else
+int printf_write(int i, const char *format, va_list args)
+{
+	format_manager_t managers[] = {
+	{'c', printf_char},
+	{'s', printf_str},
+	{'d', printf_int},
+	{'i', printf_int},
+	{'%', printf_percent},
+	{0, NULL}
+};
+	int n = 0, j;
+
+	for (j = 0; managers[j].specifier != 0; j++)
+	{
+		if (format[i] == managers[j].specifier)
+		{
+			n += managers[j].manager(args);
+			break;
+		}
+	}
+	if (managers[j].specifier == 0)
 	{
 		n += _putchar('%');
-		n += _putchar(format);
+		n += _putchar(format[i]);
 	}
 	return (n);
 }

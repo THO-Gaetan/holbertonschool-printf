@@ -6,18 +6,18 @@ int _printf(const char *format, ...)
 	int i = 0, n = 0;
 
 	if (format == 0)
-		return (0);
+		return (-1);
 	va_start(args, format);
 	while (format[i])
 	{
 		if (format[i] == '%')
 		{
 			i++;
-			n += printf_write(format[i], args);
+			n += printf_write(i, format, args);
 		}
 		else
 			n += _putchar(format[i]);
-	i++;
+		i++;
 	}
 	va_end(args);
 	return (n);

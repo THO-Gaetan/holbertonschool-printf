@@ -4,12 +4,23 @@
 #include <stdarg.h>
 #include <unistd.h>
 
-int _putchar (char c);
-int printf_char(char format, va_list args);
-int printf_str(char format, va_list args);
-int printf_int(char format, va_list args);
+typedef struct format_managers
+{
+    char specifier;
+    int (*manager)(va_list);
+} format_manager_t;
+
+int printf_char(va_list args);
+int printf_str(va_list args);
+int printf_int(va_list args);
+int printf_percent(va_list args);
 int printf_int_helper(int i);
-int printf_write(char format, va_list args);
+
+int _putchar (char c);
+int printf_char(va_list args);
+int printf_str(va_list args);
+int printf_int(va_list args);
+int printf_write(int i, const char *format, va_list args);
 int _printf(const char *format, ...);
 
 #endif
