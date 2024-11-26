@@ -60,14 +60,17 @@ int printf_int(va_list args)
 int printf_int_helper(int i)
 {
 	int n = 0;
+	unsigned int sum;
 
 	if (i < 0)
 	{
-		i = -i;
 		n += _putchar('-');
+		sum = -i;
 	}
-	if (i / 10)
-		n += printf_int_helper(i / 10);
-	n += _putchar((i % 10) + '0');
+	else
+		sum = i;
+	if (sum / 10)
+		n += printf_int_helper(sum / 10);
+	n += _putchar((sum % 10) + '0');
 	return (n);
 }
