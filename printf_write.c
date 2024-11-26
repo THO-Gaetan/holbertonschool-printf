@@ -3,6 +3,7 @@
 int printf_write(char format, va_list args)
 {
 	int n = 0;
+	char *str;
 
 	if (format == 'c')
 	{
