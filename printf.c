@@ -23,8 +23,8 @@ int _printf(const char *format, ...)
 			i++;
 			if (format[i] == 0)
 			{
-				n += _putchar('%');
-				return (n);
+				va_end(args);
+				return (-1);
 			}
 			n += printf_write(i, format, args);
 		}
