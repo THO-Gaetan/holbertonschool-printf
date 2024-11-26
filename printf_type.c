@@ -67,7 +67,8 @@ int printf_int_helper(int i)
 		sum = -i;
 		_putchar('-');
 	}
-	else sum = n;
+	else
+		sum = n;
 	if (sum / 10)
 		n += printf_int_helper(sum / 10);
 	n += _putchar((sum % 10) + '0');
