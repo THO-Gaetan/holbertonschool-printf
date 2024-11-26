@@ -1,6 +1,30 @@
 #include "main.h"
 
-int printf_write(int n, const char format)
+int printf_write(char format, va_list args)
 {
-	
+	int n = 0;
+
+	if (format == 'c')
+	{
+		n += _putchar(va_arg(args, int));
+	}
+	else if (format == 's')
+	{
+		str = va_arg(args, char*);
+		if (!str)
+			str = "(nil)";
+		while (*str)
+		{
+			n += _putchar(*str);
+			str++;
+		}
+	}
+	else if (format == '%')
+		n += _putchar('%');
+	else
+	{
+		n += _putchar('%');
+		n += _putchar(format);
+	}
+	return (n);
 }

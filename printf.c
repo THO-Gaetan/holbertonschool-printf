@@ -14,30 +14,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == 'c')
-			{
-				n += _putchar(va_arg(args, int));
-			}
-			else if (format[i] == 's')
-			{
-				str = va_arg(args, char*);
-				if (!str)
-					str = "(nil)";
-				while (*str)
-				{
-					n += _putchar(*str);
-					str++;
-				}
-			}
-			else if (format[i] == '%')
-			{
-				n += _putchar('%');
-			}
-			else
-			{
-				n += _putchar('%');
-				n += _putchar(format[i]);
-			}
+			n += printf_write(format[i], args)
 		}
 		else
 			n += _putchar(format[i]);
