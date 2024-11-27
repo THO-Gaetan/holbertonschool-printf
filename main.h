@@ -18,6 +18,9 @@ int printf_char(va_list args);
 int printf_str(va_list args);
 int printf_int(va_list args);
 int printf_percent(va_list args);
+int printf_u(va_list args);
+int printf_o(va_list args);
+int printf_x(va_list args);
 int printf_int_helper(int i);
 
 int _putchar (char c);

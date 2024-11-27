@@ -14,7 +14,7 @@ int main(void)
 	unsigned int ui;
 	void *addr;
 
-	len = _printf("%");
+	len = _printf("J'adors codé printf, j'en ferais toute les semaines");
 	len2 = printf("%");
 	ui = (unsigned int)INT_MAX + 1024;
 	addr = (void *)0x7ffe637541f0;

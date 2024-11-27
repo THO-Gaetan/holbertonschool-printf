@@ -9,25 +9,29 @@
  */
 int printf_write(int i, const char *format, va_list args)
 {
-	format_manager_t managers[] = {
+	format_manager_t Handler[] = {
 	{'c', printf_char},
 	{'s', printf_str},
 	{'d', printf_int},
 	{'i', printf_int},
+	{'u', printf_u},
+	{'o', printf_o},
+	{'x', printf_x},
+	{'X', printf_x},
 	{'%', printf_percent},
 	{0, NULL}
 };
 	int n = 0, j;
 
-	for (j = 0; managers[j].specifier != 0; j++)
+	for (j = 0; Handler[j].specifier != 0; j++)
 	{
-		if (format[i] == managers[j].specifier)
+		if (format[i] == Handler[j].specifier)
 		{
-			n += managers[j].manager(args);
+			n += Handler[j].manager(args);
 			break;
 		}
 	}
-	if (managers[j].specifier == 0)
+	if (Handler[j].specifier == 0)
 	{
 		n += _putchar('%');
 		n += _putchar(format[i]);
