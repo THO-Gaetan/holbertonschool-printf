@@ -22,14 +22,14 @@ printf("The answer is: %d", number); Affichage d'un entier.
 
 ce code explique :
 
-**Function declarations:**
+## **Function declarations:**
 printf_char, printf_str, printf_int, printf_percent: Functions to handle different types of formatting (%c, %s, %d/%i, %%).
 
 **printf_int_helper:** Helper function to print integers.
 
 **_putchar:** Function to write a single character.
 
-**Implementations:**
+## **Implementations:**
 
 **printf_char:** *Prints a character from va_list.*
 
@@ -41,11 +41,11 @@ printf_char, printf_str, printf_int, printf_percent: Functions to handle differe
 
 **printf_write:** *Probably a custom write function.*
 
-**Fonction principale :**
+## **Fonction principale :**
 
 **_printf :** *Main function that parses the format string and calls the appropriate functions for each specifier.*
 
-**Conclusion**
+## **Conclusion**
 
 *This code forms a basic implementation of printf, capable of handling basic formats like %c, %s, %d, %i, and %%. It uses va_list to handle variable arguments, allowing flexibility similar to standard printf.*
 
