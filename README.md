@@ -16,3 +16,5 @@ simple display of a charcter string
 int number = 42;
 printf("The answer is: %d", number); Affichage d'un entier.
 ```
+![Capture d'écran 2024-11-27 143719](https://github.com/user-attachments/assets/318427ec-582e-47a4-8877-3d6cf95ca4e2)
+
