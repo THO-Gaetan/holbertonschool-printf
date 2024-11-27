@@ -16,5 +16,39 @@ simple display of a charcter string
 int number = 42;
 printf("The answer is: %d", number); Affichage d'un entier.
 ```
+## 
+
 ![Capture d'écran 2024-11-27 143719](https://github.com/user-attachments/assets/318427ec-582e-47a4-8877-3d6cf95ca4e2)
+
+ce code explique :
+
+**Function declarations:**
+printf_char, printf_str, printf_int, printf_percent: Functions to handle different types of formatting (%c, %s, %d/%i, %%).
+
+**printf_int_helper:** Helper function to print integers.
+
+**_putchar:** Function to write a single character.
+
+**Implementations:**
+
+**printf_char:** *Prints a character from va_list.*
+
+**printf_str:** *Prints a character string.*
+
+**printf_int:** *Handles printing of integers.*
+
+**printf_percent:** *Prints the '%' character.*
+
+**printf_write:** *Probably a custom write function.*
+
+**Fonction principale :**
+
+**_printf :** *Main function that parses the format string and calls the appropriate functions for each specifier.*
+
+**Conclusion**
+
+*This code forms a basic implementation of printf, capable of handling basic formats like %c, %s, %d, %i, and %%. It uses va_list to handle variable arguments, allowing flexibility similar to standard printf.*
+
+
+
 
