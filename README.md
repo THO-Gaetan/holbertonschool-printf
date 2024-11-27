@@ -1,5 +1,6 @@
 ## Printf
-![alt text](vscode-local:/c%3A/Users/rusec/Pictures/Screenshots/Capture%20d%27%C3%A9cran%202024-11-27%20113752.png)
+![Capture d'écran 2024-11-27 113752](https://github.com/user-attachments/assets/570864dc-bd3a-4e0e-a531-412beb31dd8d)
+
 # explanation of the printf project
 Creation of the 'printf' code involves the intergration of 'putchar.c'. The 'fprint' function is useful for displaying simple text, variable values, and formatting the display of integer data, floating-point numbers, characters, strings, and hexadecimal values. it also allows combining text and variables effectively.
 ## Features
