@@ -20,6 +20,7 @@ int printf_write(int i, const char *format, va_list args)
 	{'s', printf_str},
 	{'d', printf_int},
 	{'i', printf_int},
+	{'b', printf_b},
 	{'u', printf_u},
 	{'%', printf_percent},
 	{0, NULL}
