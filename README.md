@@ -69,6 +69,12 @@ printf_char``, ``printf_str``, ``printf_int``, ``printf_percent:`` Functions to 
 
 ## Manual page
 
+The man that you can see bellow can be accesed by the following command :
+
+``
+man man_3_printf
+``
+
 ![image](https://github.com/user-attachments/assets/65101457-8184-405a-8d20-20d9c24943cf)
 
 ## **Conclusion**
