@@ -15,9 +15,6 @@ int printf_write(int i, const char *format, va_list args)
 	{'d', printf_int},
 	{'i', printf_int},
 	{'u', printf_u},
-	{'o', printf_o},
-	{'x', printf_x},
-	{'X', printf_x},
 	{'%', printf_percent},
 	{0, NULL}
 };
