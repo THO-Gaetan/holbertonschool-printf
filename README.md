@@ -17,7 +17,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o printf
 ## Flowchart
 Here is the flowchart that show the structure of how the _printf function work
 
-![image](https://github.com/user-attachments/assets/7387b499-6c09-4baf-80b2-50837d1ff912)
+![alt text](flowchart.png)
 
 ## use printf example
 Exemple :
