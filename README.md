@@ -81,5 +81,7 @@ The man that you can see bellow can be accesed by the following command : ``man 
 
 printf project created by **Cesur Dulker** and **Gatean Pineiro**.
 
+**Cesur Dulker github :** https://github.com/THO-Gaetan/holbertonschool-printf
 
+**Gaetan Pineiro github :** https://github.com/THO-Gaetan/holbertonschool-printf
 
