@@ -30,6 +30,6 @@ int printf_b_helper(int i)
 		n += _putchar((i % 2) + '0');
 	}
 	if (i == 0 && j == 0)
-		n += _putchar(i + '0');
+		n += _putchar('0');
 	return (n);
 }
