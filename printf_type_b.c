@@ -21,7 +21,7 @@ int printf_b(va_list args)
 int printf_b_helper(int i)
 {
 	int n = 0;
-	int j = 0;
+	int j;
 
 	if (i > 0)
 	{
