@@ -14,7 +14,9 @@ The gcc use permit use to compile the printf function taking all .c files in the
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o printf
 ``
 
-##
+## Flowchart
+Here is the flowchart that show the structure of how the _printf function work
+
 ## use printf example
 Exemple :
 ```c
