@@ -8,7 +8,7 @@
  */
 int printf_b(va_list args)
 {
-	return (printf_b_helper(va_arg(args, unsigned int)));
+	return (printf_b_helper(va_arg(args, int)));
 }
 /**
  * printf_b_helper - Helper function to print a binary integer recursively
@@ -18,9 +18,9 @@ int printf_b(va_list args)
  * we print the result of i modulo 2.
  * Return: The number of characters printed
  */
-int printf_b_helper(unsigned int i)
+int printf_b_helper(int i)
 {
-	unsigned int n = 0;
+	int n = 0;
 	int j = 0;
 
 	if (i > n)
