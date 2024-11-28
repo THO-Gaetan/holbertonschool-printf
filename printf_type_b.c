@@ -23,7 +23,7 @@ int printf_b_helper(int i)
 	int n = 0;
 
 	if (i == 0)
-		n += _putchar(i + '0')
+		n += _putchar(i + '0');
 	if (i > 0)
 	{
 		n += printf_b_helper(i / 2);
