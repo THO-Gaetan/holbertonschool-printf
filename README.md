@@ -14,16 +14,25 @@ The gcc use permit use to compile the printf function taking all .c files in the
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c -o printf
 ``
 
+##
 ## use printf example
+Exemple :
 ```c
-printf("Hello, world!");
+printf("Hello, world!\n");
 simple display of a charcter string
 ```
+Terminal output :
+
+![alt text](<image (1).png>)
+
+Another exemple :
 ```c
 int number = 42;
-printf("The answer is: %d", number); 
+printf("The answer is: %d\n", number); 
 display of an integrer variable.
 ```
+Terminal Output :
+
 ## 
 **Here an exemple of the code :**
 
