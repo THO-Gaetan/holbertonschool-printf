@@ -23,7 +23,7 @@ simple display of a charcter string
 ```
 Terminal output :
 
-![alt text](<image (1).png>)
+![image (1)](https://github.com/user-attachments/assets/2ead1c12-bb89-4fd4-929c-92abbe276695)
 
 Another exemple :
 ```c
@@ -32,6 +32,8 @@ printf("The answer is: %d\n", number);
 display of an integrer variable.
 ```
 Terminal Output :
+
+![image (2)](https://github.com/user-attachments/assets/b2b8a32c-2a40-4013-b94a-7597d1ded346)
 
 ## 
 **Here an exemple of the code :**
@@ -67,7 +69,7 @@ printf_char``, ``printf_str``, ``printf_int``, ``printf_percent:`` Functions to 
 
 ## Manual page
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/65101457-8184-405a-8d20-20d9c24943cf)
 
 ## **Conclusion**
 
