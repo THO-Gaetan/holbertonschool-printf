@@ -23,13 +23,13 @@ int printf_b_helper(int i)
 	int n = 0;
 	int j = 0;
 
-	if (i > n)
+	if (i > 0)
 	{
 		j = 1;
 		n += printf_b_helper(i / 2);
 		n += _putchar((i % 2) + '0');
 	}
-	if (i == n && j == 0)
+	if (i == 0 && j == 0)
 		n += _putchar(i + '0');
 	return (n);
 }
